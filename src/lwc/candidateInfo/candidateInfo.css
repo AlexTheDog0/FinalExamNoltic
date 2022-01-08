@@ -1,0 +1,86 @@
+/**
+ * Created by Alexander on 07.01.2022.
+ */
+div{
+
+}
+
+.interviewsAmount {
+display: flex;
+    justify-content: center;
+}
+
+.interviewsAmount div{
+    width: 30px;
+}
+
+.up,.candidateInfo{
+    display: flex;
+    justify-content: center;
+
+}
+
+.names div{
+    width: 100%;
+}
+.avatar{
+    margin: 3px;
+}
+
+.up,.down{
+    padding: 5px;
+}
+
+.interviewsTable,.candidateInfo,.rate{
+    padding: 3px;
+}
+
+.candidateInfo{
+    width: 50%;
+    border-right: 1px solid gainsboro;
+}
+
+.rate{
+    width: 50%;
+}
+
+.percentage{
+    text-align: center;
+}
+
+.successful{
+    text-align: right;
+}
+
+.percents{
+    font-size: 34px;
+}
+
+.percentage{
+    display: flex;
+    justify-content: center;
+}
+
+.progress-ring{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.firstname,.lastname{
+    font-size: 26px;
+}
+
+.interviewsAmount{
+    font-size: 14px;
+}
+
+.interviewsAmount div{
+    padding: 8px;
+}
+
+.successful{
+    border-right: 1px dotted gainsboro;
+}
+
+

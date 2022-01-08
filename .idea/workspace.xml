@@ -1,18 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="eb0c6219-3d93-4aa5-8434-3b29f4bd073b" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/FinalExam.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/illuminatedCloud.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/runConfigurations/All_Tests.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/IlluminatedCloud/FinalExam/OfflineSymbolTable.zip" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/IlluminatedCloud/HireMe_FinalExam/OfflineSymbolTable.zip" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/classes/testClass.cls" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/classes/testClass.cls-meta.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/package.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/classes/ControllerLwc.cls" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/classes/ControllerLwc.cls-meta.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/lwc/candidateInfo/candidateInfo.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/lwc/candidateInfo/candidateInfo.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/lwc/candidateInfo/candidateInfo.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/lwc/candidateInfo/candidateInfo.js-meta.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/triggers/InterviewTrigger.trigger" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/triggers/InterviewTrigger.trigger-meta.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/IlluminatedCloud/FinalExam/OfflineSymbolTable.zip" beforeDir="false" afterPath="$PROJECT_DIR$/IlluminatedCloud/FinalExam/OfflineSymbolTable.zip" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/classes/testClass.cls" beforeDir="false" afterPath="$PROJECT_DIR$/src/classes/testClass.cls" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -22,6 +25,10 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="Apex Trigger" />
+        <option value="Lightning Web Component HTML" />
+        <option value="Lightning Web Component JavaScript" />
+        <option value="Lightning Web Component CSS" />
         <option value="Apex Class" />
         <option value="Apex Metadata" />
       </list>
@@ -44,6 +51,25 @@
     </option>
     <option name="projectWorkspaceSettings">
       <ProjectWorkspaceSettings>
+        <option name="anonymousApexSettings">
+          <AnonymousApexSettings>
+            <option name="savedDocuments">
+              <list>
+                <AnonymousApexSavedDocument>
+                  <option name="apexLogLevel" value="FINEST" />
+                  <option name="body" value="Date startOfWeek = Date.today().toStartOfWeek();&#10;Integer startDay = startOfWeek.day();&#10;Integer startMonth = startOfWeek.month();&#10;Integer startYear = startOfWeek.year();&#10;&#10;Date weekEnd = Date.newInstance(startYear,startMonth,startDay+6);&#10;&#10;AggregateResult[] results = [Select Count(Id) amount From Interview__c Where OwnerId = '0057Q000002KendQAC'&#10;AND CreatedDate&gt;=: startOfWeek&#10;AND CreatedDate &lt;=: weekEnd];&#10;&#10;//System.debug((Integer)results[0].get('amount')==3);&#10;System.debug(results[0].get('amount'));&#10;&#10;System.debug(startOfWeek + ' --&gt; ' + weekEnd);&#10;&#10;//System.debug([SELECT CreatedDate &#10;//From Interview__c &#10;//WHERE Name = 'A-0015' &#10;//LIMIT 1].CreatedDate &gt; today);&#10;&#10;//System.debug([Select Id  From Interview__c Where OwnerId = '0057Q000002KendQAC'&#10;//AND CreatedDate&gt;=: weekAgo&#10;//AND CreatedDate &lt;: today]);" />
+                  <option name="name" value="Anonymous Apex 1" />
+                </AnonymousApexSavedDocument>
+                <AnonymousApexSavedDocument>
+                  <option name="apexLogLevel" value="FINEST" />
+                  <option name="body" value="Date today = Date.today();&#10;Integer todayDay = today.day();&#10;Integer todayMonth = today.month();&#10;Integer todayYear = today.year();&#10;&#10;//System.debug(todayDay + '/' + todayMonth + '/' + todayYear);&#10;&#10;Date weekAgo = Date.newInstance(todayYear,todayMonth,todayDay-7);&#10;&#10;System.debug(weekAgo);" />
+                  <option name="name" value="Anonymous Apex 2" />
+                </AnonymousApexSavedDocument>
+              </list>
+            </option>
+            <option name="selectedSavedDocumentIndex" value="0" />
+          </AnonymousApexSettings>
+        </option>
         <option name="connectionWorkspaceSettings">
           <map>
             <entry key="FinalExam">
@@ -51,7 +77,13 @@
                 <ConnectionWorkspaceSettings>
                   <option name="buildSuccessDatesBySourceRootRelativePath">
                     <map>
+                      <entry key="APEXCLASS:CONTROLLERLWC" value="1641600599582" />
+                      <entry key="APEXCLASS:PREVENTCREATIONHANDLER" value="1641576620000" />
                       <entry key="APEXCLASS:TESTCLASS" value="1639948631745" />
+                      <entry key="APEXTRIGGER:INTERVIEWTRIGGER" value="1641582843882" />
+                      <entry key="APEXTRIGGER:PREVENTCREATIONINTERVIEW" value="1641577828000" />
+                      <entry key="APEXTRIGGER:PREVENTINTERVIEWCREATIONTRIGGER" value="1641576532000" />
+                      <entry key="LIGHTNINGCOMPONENTBUNDLE:CANDIDATEINFO" value="1641600746000" />
                     </map>
                   </option>
                 </ConnectionWorkspaceSettings>
@@ -60,10 +92,30 @@
           </map>
         </option>
         <option name="retrieveAndMergeDefault" value="false" />
+        <option name="soqlQuerySettings">
+          <SoqlQuerySettings>
+            <option name="savedDocuments">
+              <list>
+                <SoqlQuerySavedDocument>
+                  <option name="body" value="Select Count(Id) From Interview__c Where OwnerId = '0057Q000002KendQAC'&#10;AND CreatedDate&gt;=: weekAgo&#10;AND CreatedDate &lt;: today" />
+                  <option name="name" value="SOQL Query 1" />
+                </SoqlQuerySavedDocument>
+                <SoqlQuerySavedDocument>
+                  <option name="body" value="Select FirstName,LastName,Amount_of_Interviews__c,Successful_interview__c From Contact WHERE OwnerId = '0057Q000002KendQAC' ORDER BY Amount_of_Interviews__c DESC " />
+                  <option name="name" value="SOQL Query 2" />
+                </SoqlQuerySavedDocument>
+              </list>
+            </option>
+            <option name="selectedSavedDocumentIndex" value="1" />
+          </SoqlQuerySettings>
+        </option>
       </ProjectWorkspaceSettings>
     </option>
   </component>
   <component name="ProjectId" id="22WKSh3BDGCXCfYIJh6irhP1pzC" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectReloadState">
     <option name="STATE" value="1" />
   </component>
@@ -76,6 +128,10 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
@@ -93,11 +149,28 @@
       <workItem from="1639948399220" duration="16000" />
       <workItem from="1639948416243" duration="19000" />
       <workItem from="1639948596160" duration="79000" />
-      <workItem from="1641410673162" duration="532000" />
+      <workItem from="1641410673162" duration="1441000" />
+      <workItem from="1641567865237" duration="68000" />
+      <workItem from="1641567938369" duration="8787000" />
+      <workItem from="1641579055609" duration="1766000" />
+      <workItem from="1641581994240" duration="640000" />
+      <workItem from="1641582645141" duration="15757000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
 </project>

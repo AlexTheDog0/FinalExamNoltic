@@ -1,0 +1,69 @@
+<!--
+ - Created by Alexander on 07.01.2022.
+ -->
+
+<!-- Candidate Info -->
+<template>
+    <lightning-card>
+
+        <template if:true={candidate.data}>
+            <div class="up">
+
+                <div class="candidateInfo ">
+                    <div class="avatar">
+                        <lightning-avatar size="large" src="/bad/image/url.jpg" initials="" variant="circle" fallback-icon-name="standard:avatar"   class="slds-m-top_x-small"></lightning-avatar>
+                    </div>
+                    <div class="names">
+                        <div class="firstname slds-text-title">
+                            {firstName}
+                        </div>
+
+                        <div class="lastname slds-text-title">
+                            <b>{lastName}</b>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="rate">
+                    <div class="percentage">
+                        <div class='percents slds-text-title'>{percentage}%</div>
+                        <div class='progress-ring'><lightning-progress-ring value={percentage}></lightning-progress-ring></div>
+
+                    </div>
+                    <div class="interviewsAmount slds-text-title">
+
+                        <div class="successful slds-text-color_success">
+                            {successfulInterviews}
+                        </div>
+                        <div class="general">
+                            {amountOfInterviews}
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </template>
+
+        <div class="down">
+            <div class="interviewsTable">
+                <template if:true={allActivitiesData}>
+                    <lightning-datatable
+                            key-field="Id"
+                            data={allActivitiesData}
+                            columns={columns}
+                            hide-checkbox-column="true"
+                    >
+                    </lightning-datatable>
+                </template>
+
+            </div>
+
+
+
+
+
+        </div>
+    </lightning-card>
+</template>

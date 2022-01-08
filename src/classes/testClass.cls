@@ -4,4 +4,5 @@
 
 public with sharing class testClass {
     public String Name {get;set;}
+
 }
