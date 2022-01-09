@@ -5,19 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="eb0c6219-3d93-4aa5-8434-3b29f4bd073b" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/classes/InterviewSelector.cls" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/classes/InterviewsController.cls" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/classes/TestDataFactory.cls" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/classes/TestDataFactory.cls-meta.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/classes/Tests.cls" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/classes/Tests.cls-meta.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/classes/TestTrigger.cls" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/classes/ControllerLwc.cls" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/classes/ControllerLwc.cls-meta.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/classes/InterviewSelector.cls-meta.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/classes/testClass.cls" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/classes/testClass.cls-meta.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/classes/InterviewsController.cls-meta.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lwc/candidateInfo/candidateInfo.js-meta.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/lwc/candidateInfo/candidateInfo.js-meta.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/triggers/InterviewTrigger.trigger" beforeDir="false" afterPath="$PROJECT_DIR$/src/triggers/InterviewTrigger.trigger" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/classes/TestDataFactory.cls" beforeDir="false" afterPath="$PROJECT_DIR$/src/classes/TestDataFactory.cls" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/classes/Tests.cls" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/classes/Tests.cls-meta.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/classes/TestTrigger.cls-meta.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -85,12 +77,14 @@
                   <option name="buildSuccessDatesBySourceRootRelativePath">
                     <map>
                       <entry key="APEXCLASS:CONTROLLERLWC" value="1641657747154" />
+                      <entry key="APEXCLASS:DESTRUCTIVECHANGES.XML" value="1641762129000" />
                       <entry key="APEXCLASS:INTERVIEWSCONTROLLER" value="1641743207923" />
                       <entry key="APEXCLASS:INTERVIEWSELECTOR" value="1641743172718" />
                       <entry key="APEXCLASS:INTERVIEWTRIGGERHANDLER" value="1641753677000" />
                       <entry key="APEXCLASS:PREVENTCREATIONHANDLER" value="1641576620000" />
                       <entry key="APEXCLASS:TESTCLASS" value="1641758547000" />
-                      <entry key="APEXCLASS:TESTDATAFACTORY" value="1641758534000" />
+                      <entry key="APEXCLASS:TESTDATAFACTORY" value="1641763218139" />
+                      <entry key="APEXCLASS:TESTTRIGGER" value="1641763905728" />
                       <entry key="APEXCLASS:UNITTESTINGCLASSES" value="1641759184000" />
                       <entry key="APEXTRIGGER:INTERVIEWTRIGGER" value="1641758409966" />
                       <entry key="APEXTRIGGER:PREVENTCREATIONINTERVIEW" value="1641577828000" />
@@ -147,6 +141,184 @@
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
+  <component name="RunManager" selected="Apex Unit Tests.TestTrigger">
+    <configuration name="TestTrigger" type="com.illuminatedcloud.intellij" factoryName="Apex Unit Tests" temporary="true" show_console_on_std_err="false" show_console_on_std_out="false">
+      <option name="allTests" value="false" />
+      <option name="allowRunningInParallel" value="false" />
+      <option name="apexLogLevel" value="DEBUG" />
+      <option name="calloutsLogLevel" value="INFO" />
+      <option name="connectionName" value="FinalExam" />
+      <option name="connectionType" value="MDAPI" />
+      <option name="contextConfiguration" value="true" />
+      <option name="databaseLogLevel" value="INFO" />
+      <option name="logLevelsInitialized" value="false" />
+      <option name="moduleToTestClassNames">
+        <map>
+          <entry key="FinalExam">
+            <value>
+              <set>
+                <option value="TestTrigger" />
+              </set>
+            </value>
+          </entry>
+        </map>
+      </option>
+      <option name="nbaLogLevel" value="INFO" />
+      <option name="profilingLogLevel" value="INFO" />
+      <option name="projectPathOnTarget" />
+      <option name="selectedOptions">
+        <list />
+      </option>
+      <option name="systemLogLevel" value="DEBUG" />
+      <option name="testClassToTestMethodNames">
+        <map />
+      </option>
+      <option name="testSuiteName" />
+      <option name="validationLogLevel" value="INFO" />
+      <option name="visualforceLogLevel" value="INFO" />
+      <option name="waveLogLevel" value="INFO" />
+      <option name="workflowLogLevel" value="INFO" />
+      <method v="2" />
+    </configuration>
+    <configuration name="TestTrigger.PreventCreationTest" type="com.illuminatedcloud.intellij" factoryName="Apex Unit Tests" temporary="true" show_console_on_std_err="false" show_console_on_std_out="false">
+      <option name="allTests" value="false" />
+      <option name="allowRunningInParallel" value="false" />
+      <option name="apexLogLevel" value="DEBUG" />
+      <option name="calloutsLogLevel" value="INFO" />
+      <option name="connectionName" value="FinalExam" />
+      <option name="connectionType" value="MDAPI" />
+      <option name="contextConfiguration" value="true" />
+      <option name="databaseLogLevel" value="INFO" />
+      <option name="logLevelsInitialized" value="false" />
+      <option name="moduleToTestClassNames">
+        <map>
+          <entry key="FinalExam">
+            <value>
+              <set>
+                <option value="TestTrigger" />
+              </set>
+            </value>
+          </entry>
+        </map>
+      </option>
+      <option name="nbaLogLevel" value="INFO" />
+      <option name="profilingLogLevel" value="INFO" />
+      <option name="projectPathOnTarget" />
+      <option name="selectedOptions">
+        <list />
+      </option>
+      <option name="systemLogLevel" value="DEBUG" />
+      <option name="testClassToTestMethodNames">
+        <map>
+          <entry key="TestTrigger">
+            <value>
+              <set>
+                <option value="PreventCreationTest" />
+              </set>
+            </value>
+          </entry>
+        </map>
+      </option>
+      <option name="testSuiteName" />
+      <option name="validationLogLevel" value="INFO" />
+      <option name="visualforceLogLevel" value="INFO" />
+      <option name="waveLogLevel" value="INFO" />
+      <option name="workflowLogLevel" value="INFO" />
+      <method v="2" />
+    </configuration>
+    <configuration name="TestTrigger.updateOperationTest" type="com.illuminatedcloud.intellij" factoryName="Apex Unit Tests" temporary="true" show_console_on_std_err="false" show_console_on_std_out="false">
+      <option name="allTests" value="false" />
+      <option name="allowRunningInParallel" value="false" />
+      <option name="apexLogLevel" value="DEBUG" />
+      <option name="calloutsLogLevel" value="INFO" />
+      <option name="connectionName" value="FinalExam" />
+      <option name="connectionType" value="MDAPI" />
+      <option name="contextConfiguration" value="true" />
+      <option name="databaseLogLevel" value="INFO" />
+      <option name="logLevelsInitialized" value="false" />
+      <option name="moduleToTestClassNames">
+        <map>
+          <entry key="FinalExam">
+            <value>
+              <set>
+                <option value="TestTrigger" />
+              </set>
+            </value>
+          </entry>
+        </map>
+      </option>
+      <option name="nbaLogLevel" value="INFO" />
+      <option name="profilingLogLevel" value="INFO" />
+      <option name="projectPathOnTarget" />
+      <option name="selectedOptions">
+        <list />
+      </option>
+      <option name="systemLogLevel" value="DEBUG" />
+      <option name="testClassToTestMethodNames">
+        <map>
+          <entry key="TestTrigger">
+            <value>
+              <set>
+                <option value="updateOperationTest" />
+              </set>
+            </value>
+          </entry>
+        </map>
+      </option>
+      <option name="testSuiteName" />
+      <option name="validationLogLevel" value="INFO" />
+      <option name="visualforceLogLevel" value="INFO" />
+      <option name="waveLogLevel" value="INFO" />
+      <option name="workflowLogLevel" value="INFO" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Tests" type="com.illuminatedcloud.intellij" factoryName="Apex Unit Tests" temporary="true" show_console_on_std_err="false" show_console_on_std_out="false">
+      <option name="allTests" value="false" />
+      <option name="allowRunningInParallel" value="false" />
+      <option name="apexLogLevel" value="DEBUG" />
+      <option name="calloutsLogLevel" value="INFO" />
+      <option name="connectionName" value="FinalExam" />
+      <option name="connectionType" value="MDAPI" />
+      <option name="contextConfiguration" value="true" />
+      <option name="databaseLogLevel" value="INFO" />
+      <option name="logLevelsInitialized" value="false" />
+      <option name="moduleToTestClassNames">
+        <map>
+          <entry key="FinalExam">
+            <value>
+              <set>
+                <option value="Tests" />
+              </set>
+            </value>
+          </entry>
+        </map>
+      </option>
+      <option name="nbaLogLevel" value="INFO" />
+      <option name="profilingLogLevel" value="INFO" />
+      <option name="projectPathOnTarget" />
+      <option name="selectedOptions">
+        <list />
+      </option>
+      <option name="systemLogLevel" value="DEBUG" />
+      <option name="testClassToTestMethodNames">
+        <map />
+      </option>
+      <option name="testSuiteName" />
+      <option name="validationLogLevel" value="INFO" />
+      <option name="visualforceLogLevel" value="INFO" />
+      <option name="waveLogLevel" value="INFO" />
+      <option name="workflowLogLevel" value="INFO" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Apex Unit Tests.TestTrigger" />
+        <item itemvalue="Apex Unit Tests.TestTrigger.PreventCreationTest" />
+        <item itemvalue="Apex Unit Tests.TestTrigger.updateOperationTest" />
+        <item itemvalue="Apex Unit Tests.Tests" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -168,7 +340,7 @@
       <workItem from="1641581994240" duration="640000" />
       <workItem from="1641582645141" duration="15856000" />
       <workItem from="1641656827868" duration="2395000" />
-      <workItem from="1641743021912" duration="6705000" />
+      <workItem from="1641743021912" duration="9581000" />
     </task>
     <servers />
   </component>
@@ -186,5 +358,8 @@
       </map>
     </option>
     <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/FinalExam$TestTrigger.ic2" NAME="FinalExam Coverage Results" MODIFIED="1641763911301" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="Apex" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="true" PROJECT_NAME="FinalExam" CONNECTION_NAME="FinalExam" CONNECTION_TYPE="MDAPI" />
   </component>
 </project>
