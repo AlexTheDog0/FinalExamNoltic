@@ -9,15 +9,17 @@ trigger InterviewTrigger on Interview__c (before insert,before update ) {
 
 
             //Evaluating the date of week beginning
-            Date startOfWeek = Date.today().toStartOfWeek();
+            Datetime startOfWeek = Date.today().toStartOfWeek();
             Integer startDay = startOfWeek.day();
             Integer startMonth = startOfWeek.month();
             Integer startYear = startOfWeek.year();
+            startOfWeek.addHours(23);
+            startOfWeek.addMinutes(58);
 
-            Date weekEnd = Date.newInstance(startYear, startMonth, startDay + 6);
+            Datetime weekEnd = Datetime.newInstance(startYear, startMonth, startDay + 6,23,58,10);
 
             Id CurrentOwner = interview.OwnerId;
-
+            System.debug(CurrentOwner);
             AggregateResult[] results = [
                     SELECT COUNT(Id) amount
                     FROM Interview__c
@@ -26,24 +28,34 @@ trigger InterviewTrigger on Interview__c (before insert,before update ) {
                     AND CreatedDate <= :weekEnd
             ];
 
+
+            System.debug(startOfWeek);
+            System.debug(weekEnd);
+
+            System.debug((Integer) results[0].get('amount'));
             if ((Integer) results[0].get('amount') >= 3) {
                 interview.addError('To much interviews on this week');
             }
+            else {
+                //Add this interview to general amount of interviews for related candidate
+                Contact relatedCandidate = [SELECT Id,Amount_of_Interviews__c
+                FROM Contact
+                WHERE Id =: interview.Candidate__c
+                LIMIT 1];
 
-            //Add this interview to general amount of interviews for related candidate
-            Contact relatedCandidate = [SELECT Id,Amount_of_Interviews__c
-            FROM Contact
-            WHERE Id =: interview.Candidate__c
-            LIMIT 1];
+                relatedCandidate.Amount_of_Interviews__c += 1;
 
-            relatedCandidate.Amount_of_Interviews__c += 1;
+                update relatedCandidate;
+            }
 
-            update relatedCandidate;
+
+
 
 
         }
     }
     else if(Trigger.isUpdate){
+
 
         Map<Id,Interview__c> oldValues = Trigger.oldMap;
 
@@ -67,10 +79,12 @@ trigger InterviewTrigger on Interview__c (before insert,before update ) {
 
                 else if(interview.Status__c == 'Rejected'){
                     interview.Active__c = false;
+
                 }
 
             }
         }
     }
+
 
 }

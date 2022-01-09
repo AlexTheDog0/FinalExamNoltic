@@ -5,17 +5,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="eb0c6219-3d93-4aa5-8434-3b29f4bd073b" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/classes/ControllerLwc.cls" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/classes/ControllerLwc.cls-meta.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/lwc/candidateInfo/candidateInfo.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/lwc/candidateInfo/candidateInfo.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/lwc/candidateInfo/candidateInfo.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/lwc/candidateInfo/candidateInfo.js-meta.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/triggers/InterviewTrigger.trigger" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/triggers/InterviewTrigger.trigger-meta.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/classes/InterviewSelector.cls" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/classes/InterviewsController.cls" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/classes/TestDataFactory.cls" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/classes/TestDataFactory.cls-meta.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/classes/Tests.cls" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/classes/Tests.cls-meta.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/IlluminatedCloud/FinalExam/OfflineSymbolTable.zip" beforeDir="false" afterPath="$PROJECT_DIR$/IlluminatedCloud/FinalExam/OfflineSymbolTable.zip" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/classes/testClass.cls" beforeDir="false" afterPath="$PROJECT_DIR$/src/classes/testClass.cls" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/classes/ControllerLwc.cls" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/classes/ControllerLwc.cls-meta.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/classes/InterviewSelector.cls-meta.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/classes/testClass.cls" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/classes/testClass.cls-meta.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/classes/InterviewsController.cls-meta.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/lwc/candidateInfo/candidateInfo.js-meta.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/lwc/candidateInfo/candidateInfo.js-meta.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/triggers/InterviewTrigger.trigger" beforeDir="false" afterPath="$PROJECT_DIR$/src/triggers/InterviewTrigger.trigger" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -62,12 +64,17 @@
                 </AnonymousApexSavedDocument>
                 <AnonymousApexSavedDocument>
                   <option name="apexLogLevel" value="FINEST" />
-                  <option name="body" value="Date today = Date.today();&#10;Integer todayDay = today.day();&#10;Integer todayMonth = today.month();&#10;Integer todayYear = today.year();&#10;&#10;//System.debug(todayDay + '/' + todayMonth + '/' + todayYear);&#10;&#10;Date weekAgo = Date.newInstance(todayYear,todayMonth,todayDay-7);&#10;&#10;System.debug(weekAgo);" />
+                  <option name="body" value="&#10;&#10;Id company = [select Id from Account Where Name = 'TestCompany'].Id;&#10;Id candidate = [select Id from Contact Where FirstName = 'Alex' and LastName = 'Adamovsky'].Id;&#10;Id vacancy = [select Id from Vacancy__c Where Name = 'Trainee Developer'].Id;&#10;&#10;Interview__c inter = new Interview__c(&#10;        Company__c = company,&#10;        Candidate__c = candidate,&#10;        Vacancy__c = vacancy);&#10;&#10;insert inter;&#10;delete inter;" />
                   <option name="name" value="Anonymous Apex 2" />
+                </AnonymousApexSavedDocument>
+                <AnonymousApexSavedDocument>
+                  <option name="apexLogLevel" value="FINEST" />
+                  <option name="body" value="//Evaluating the date of week beginning&#10;Datetime startOfWeek = Date.today().toStartOfWeek();&#10;Integer startDay = startOfWeek.day();&#10;Integer startMonth = startOfWeek.month();&#10;Integer startYear = startOfWeek.year();&#10;startOfWeek.addHours(23);&#10;startOfWeek.addMinutes(58);&#10;&#10;Datetime weekEnd = Datetime.newInstance(startYear, startMonth, startDay + 6,23,58,10);&#10;&#10;Id CurrentOwner = '0057Q000002JxOEQA0';&#10;&#10;List&lt;Interview__c&gt; interviews= [&#10;        SELECT Id,Name&#10;        FROM Interview__c&#10;        WHERE OwnerId = :CurrentOwner&#10;        AND CreatedDate &gt;= :startOfWeek&#10;        AND CreatedDate &lt;= :weekEnd&#10;];&#10;&#10;System.debug(interviews);" />
+                  <option name="name" value="Anonymous Apex 3" />
                 </AnonymousApexSavedDocument>
               </list>
             </option>
-            <option name="selectedSavedDocumentIndex" value="0" />
+            <option name="selectedSavedDocumentIndex" value="1" />
           </AnonymousApexSettings>
         </option>
         <option name="connectionWorkspaceSettings">
@@ -77,13 +84,18 @@
                 <ConnectionWorkspaceSettings>
                   <option name="buildSuccessDatesBySourceRootRelativePath">
                     <map>
-                      <entry key="APEXCLASS:CONTROLLERLWC" value="1641600599582" />
+                      <entry key="APEXCLASS:CONTROLLERLWC" value="1641657747154" />
+                      <entry key="APEXCLASS:INTERVIEWSCONTROLLER" value="1641743207923" />
+                      <entry key="APEXCLASS:INTERVIEWSELECTOR" value="1641743172718" />
+                      <entry key="APEXCLASS:INTERVIEWTRIGGERHANDLER" value="1641753677000" />
                       <entry key="APEXCLASS:PREVENTCREATIONHANDLER" value="1641576620000" />
-                      <entry key="APEXCLASS:TESTCLASS" value="1639948631745" />
-                      <entry key="APEXTRIGGER:INTERVIEWTRIGGER" value="1641582843882" />
+                      <entry key="APEXCLASS:TESTCLASS" value="1641758547000" />
+                      <entry key="APEXCLASS:TESTDATAFACTORY" value="1641758534000" />
+                      <entry key="APEXCLASS:UNITTESTINGCLASSES" value="1641759184000" />
+                      <entry key="APEXTRIGGER:INTERVIEWTRIGGER" value="1641758409966" />
                       <entry key="APEXTRIGGER:PREVENTCREATIONINTERVIEW" value="1641577828000" />
                       <entry key="APEXTRIGGER:PREVENTINTERVIEWCREATIONTRIGGER" value="1641576532000" />
-                      <entry key="LIGHTNINGCOMPONENTBUNDLE:CANDIDATEINFO" value="1641600746000" />
+                      <entry key="LIGHTNINGCOMPONENTBUNDLE:CANDIDATEINFO" value="1641657608000" />
                     </map>
                   </option>
                 </ConnectionWorkspaceSettings>
@@ -154,7 +166,9 @@
       <workItem from="1641567938369" duration="8787000" />
       <workItem from="1641579055609" duration="1766000" />
       <workItem from="1641581994240" duration="640000" />
-      <workItem from="1641582645141" duration="15757000" />
+      <workItem from="1641582645141" duration="15856000" />
+      <workItem from="1641656827868" duration="2395000" />
+      <workItem from="1641743021912" duration="6705000" />
     </task>
     <servers />
   </component>
