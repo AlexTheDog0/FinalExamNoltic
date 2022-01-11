@@ -62,9 +62,10 @@ public with sharing class TestTrigger {
         Test.startTest();
         try{
             Database.insert(inter4);
+            System.assert(false,'Should failed due to bigger amount of interviews per week');
         }
         catch (DmlException ex){
-            System.assertEquals(ex.getMessage(),'Expected: Insert failed. First exception on row 0; first error: FIELD_CUSTOM_VALIDATION_EXCEPTION, To much interviews on this week: []');
+            System.assert(ex.getMessage().contains('To much interviews on this week'));
         }
         Test.stopTest();
 
